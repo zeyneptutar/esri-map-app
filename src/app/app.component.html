@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="map-container">
+    <app-esri-map [center]="mapCenter" [basemap]="basemapType" [zoom]="mapZoomLevel" (mapLoaded)="mapLoadedEvent($event)" (basemapListObject)="createEsriBasemaps($event)">
+    </app-esri-map>
+    <app-zoom-buttons (zoomButtonClicked)="onZoomButtonClicked($event)">
+    </app-zoom-buttons>
+    <app-basemaps [basemapList]="basemapList"></app-basemaps>
+
+  </div>
+</div>

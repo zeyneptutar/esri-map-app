@@ -1,0 +1,28 @@
+.basemaps-wrapper {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+}
+
+.basemaps {
+    margin-left: 20px;
+    z-index: 1000;
+}
+
+.basemap-btn {
+    display: block;
+    margin: 3px;
+    float: none;
+    width: 36px;
+    height: 36px;
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.basemap-btn svg {
+    vertical-align: middle;
+}
