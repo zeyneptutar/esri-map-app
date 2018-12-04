@@ -10,7 +10,6 @@ import esri = __esri;
 export class EsriMapComponent implements OnInit {
 
   @Output() mapLoaded = new EventEmitter<Object>();
-  @Output() basemapListObject = new EventEmitter<Object>();
   
   @ViewChild('mapViewNode') private mapViewEl: ElementRef;
 
@@ -97,13 +96,10 @@ export class EsriMapComponent implements OnInit {
       mapView.when(() => {
         const esriMapObject = {
           mapView: mapView,
+          basemapList: basemaps
         };
-        const esriBasemapList = {
-          basemapList: basemaps,
-        }
         
         this.mapLoaded.emit(esriMapObject);
-        this.basemapListObject.emit(esriBasemapList);
       });
     } catch (error) {
       alert('We have an error: ' + error);

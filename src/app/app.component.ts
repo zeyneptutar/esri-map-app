@@ -14,15 +14,12 @@ export class AppComponent {
   basemapType = 'satellite';
   mapZoomLevel = 12;
   mapView: esri.MapView;
-  basemapList: Array<esri.Basemap>[];
+  esriBasemapList: Array<esri.Basemap>[];
 
   mapLoadedEvent(esriMapObject: Object) {
     this.mapView = esriMapObject['mapView'];
-  }
-
-  createEsriBasemaps(esriBasemapList: Object) {
-     this.basemapList = esriBasemapList['basemapList'];
-     console.log("esri basemaps", this.basemapList);
+    this.esriBasemapList = esriMapObject['basemapList'];
+    console.log("esri basemaps", this.esriBasemapList);
   }
 
   onZoomButtonClicked(zoomRatio: number){

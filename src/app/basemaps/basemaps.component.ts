@@ -7,7 +7,7 @@ import esri = __esri;
   styleUrls: ['./basemaps.component.css']
 })
 export class BasemapsComponent implements OnInit {
-  private _basemapList: Array<esri.Basemap>[];
+  private _basemapList: Array<esri.Basemap>[] = [];
 
   @Input()
   set basemapList(basemapList: Array<esri.Basemap>[]){
@@ -17,7 +17,7 @@ export class BasemapsComponent implements OnInit {
   get basemapList() {
     return this._basemapList;
   }
-  
+
   constructor() { }
 
   ngOnInit() {
