@@ -91,6 +91,10 @@ export class EsriMapComponent implements OnInit {
       const esriSatelliteBasemap = EsriBasemap.fromId("satellite");
       const esriHybridBasemap = EsriBasemap.fromId("hybrid");
 
+      esriStreetBasemap.title = "Esri Streets";
+      esriSatelliteBasemap.title = "Esri Satellite";
+      esriHybridBasemap.title = "Esri Hybrid";
+
       basemaps.push(esriStreetBasemap, esriSatelliteBasemap, esriHybridBasemap);
 
       mapView.when(() => {

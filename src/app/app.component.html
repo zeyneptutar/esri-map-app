@@ -4,6 +4,6 @@
     </app-esri-map>
     <app-zoom-buttons (zoomButtonClicked)="onZoomButtonClicked($event)">
     </app-zoom-buttons>
-    <app-basemaps [basemapList]="esriBasemapList"></app-basemaps>
+    <app-basemaps [basemapList]="esriBasemapList" (newBasemap)="basemapChanged($event)"></app-basemaps>
   </div>
 </div>

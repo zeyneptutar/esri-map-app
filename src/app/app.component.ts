@@ -34,4 +34,9 @@ export class AppComponent {
     }
     this.mapView.goTo(goToTarget,goToOptions);
   }
+
+  basemapChanged(basemap: esri.Basemap) {
+    console.log("in app ts basemap changed", basemap);
+    this.mapView.map.basemap = basemap;
+  }
 }

@@ -30,7 +30,7 @@
 
 .basemap-list-wrapper {
     position: fixed;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     bottom: 20px;
     left: 20px;
     z-index: 1000;
@@ -64,7 +64,7 @@
 
 .basemap-list-item {
     display: inline;
-    padding: .25rem 1.5rem;
+    padding: 10px;
     clear: both;
     font-weight: 400;
     color: #616161;
@@ -75,7 +75,31 @@
 }
 
 .basemap-list-item img {
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+    cursor: pointer;
 }
+
+.basemap-title {
+    position: absolute;
+    top: 55%;
+    margin-left: -55px;
+    font-size: 12px;
+    color: rgb(36, 35, 35);
+    display: none;
+    font-weight: bold;
+    white-space: pre-wrap;
+    max-width: 50px;
+    text-align: center;
+}
+
+.basemap-list-item a:hover {
+    opacity: 0.5;
+}
+
+.basemap-list-item a:hover + .basemap-title {
+    display: inline;
+}
+
+

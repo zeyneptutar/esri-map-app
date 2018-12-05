@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import esri = __esri;
 
 @Component({
@@ -7,6 +7,8 @@ import esri = __esri;
   styleUrls: ['./basemaps.component.css']
 })
 export class BasemapsComponent implements OnInit {
+  @Output() newBasemap = new EventEmitter<esri.Basemap>();
+
   private _basemapList: Array<esri.Basemap>[] = [];
 
   @Input()
@@ -21,6 +23,10 @@ export class BasemapsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  changeBasemap(basemap: esri.Basemap) {
+    this.newBasemap.emit(basemap);
   }
 
 }
